@@ -11,6 +11,8 @@ export default eventHandler(async (event) => {
   if (event.path === '/' && homeURL)
     return sendRedirect(event, homeURL)
 
+  console.log('Middleware debug:', { slug, reserveSlug: reserveSlug.includes(slug), regex: slugRegex.test(slug), cloudflare: !!cloudflare })
+
   if (slug && !reserveSlug.includes(slug) && slugRegex.test(slug) && cloudflare) {
     const { KV } = cloudflare.env
 
