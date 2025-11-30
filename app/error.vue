@@ -2,7 +2,7 @@
 import { onMounted } from 'vue'
 
 onMounted(() => {
-  window.location.href = 'https://www.google.com'
+  window.location.href = 'https://www.qq.com'
 })
 </script>
 
