@@ -1,16 +1,15 @@
 <script setup>
-import errorImage from './assets/images/404.svg?raw'
+import { onMounted } from 'vue'
+
+onMounted(() => {
+  window.location.href = 'https://www.google.com'
+})
 </script>
 
 <template>
   <NuxtLayout name="default">
-    <a
-      class="
-        mx-auto flex h-full w-full max-w-[600px] items-center justify-center
-        [&_svg]:w-full
-      "
-      href="/"
-      v-html="errorImage"
-    />
+    <div class="flex h-full w-full items-center justify-center">
+      Redirecting to Google...
+    </div>
   </NuxtLayout>
 </template>
