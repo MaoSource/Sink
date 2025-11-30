@@ -39,7 +39,7 @@ export default eventHandler(async (event) => {
       const target = redirectWithQuery ? withQuery(link.url, getQuery(event)) : link.url
       return sendRedirect(event, target, +useRuntimeConfig(event).redirectStatusCode)
     } else {
-      return sendRedirect(event, 'https://www.google.com')
+      return sendRedirect(event, 'https://www.qq.com')
     }
   }
 })
