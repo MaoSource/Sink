@@ -3,13 +3,9 @@ definePageMeta({
   layout: false,
 })
 
-onMounted(() => {
-  window.location.href = 'https://www.qq.com'
-})
+await navigateTo('https://www.qq.com', { external: true, replace: true })
 </script>
 
 <template>
-  <div class="flex h-screen w-screen items-center justify-center">
-    Redirecting...
-  </div>
+  <div />
 </template>
